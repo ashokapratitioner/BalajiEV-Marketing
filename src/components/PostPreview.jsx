@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Download, RefreshCw, Eye, Edit3, Image as ImageIcon, MapPin } from 'lucide-react';
 import { stitchMapToCanvas } from './MapCustomizer';
+import logoImageSrc from '../assets/balaji_logo_b.jpg';
 
 const TEMPLATES = [
   { id: 'glass', name: 'Glassmorphic Float', desc: 'Glass card floating over full image' },
@@ -57,7 +58,7 @@ export default function PostPreview({
         const img = new Image();
         img.onload = () => resolve(img);
         img.onerror = () => resolve(null); // Fallback if logo fails
-        img.src = './balaji_logo_b.jpg';
+        img.src = logoImageSrc;
       })
     ]);
 
