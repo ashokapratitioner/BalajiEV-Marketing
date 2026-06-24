@@ -57,7 +57,7 @@ export default function PostPreview({
         const img = new Image();
         img.onload = () => resolve(img);
         img.onerror = () => resolve(null); // Fallback if logo fails
-        img.src = '../../public/balaji_logo_b.jpg';
+        img.src = './balaji_logo_b.jpg';
       })
     ]);
 
